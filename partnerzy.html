@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partnerzy biznesowi | Patriotyzm Gospodarczy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Merriweather', serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-lg shadow-sm">
+        <div class="container mx-auto flex items-center justify-between gap-4 px-6 py-2.5 sm:py-3.5">
+            <a href="index.html" class="flex min-w-0 items-center space-x-3">
+                <img src="./assets/logo2.png" class="h-9 w-auto sm:h-10" alt="Logo Patriotyzmu Gospodarczego">
+                <span class="truncate text-lg font-bold tracking-tight text-slate-900 sm:text-xl">Patriotyzm Gospodarczy</span>
+            </a>
+            <nav class="hidden items-center space-x-8 text-sm font-medium md:flex">
+                <a href="index.html#manifest" class="text-slate-600 transition duration-300 hover:text-red-600">O ruchu</a>
+                <a href="#korzysci" class="text-slate-600 transition duration-300 hover:text-red-600">Korzyści</a>
+                <a href="#obszary" class="text-slate-600 transition duration-300 hover:text-red-600">Obszary współpracy</a>
+                <a href="#proces" class="text-slate-600 transition duration-300 hover:text-red-600">Jak współpracujemy</a>
+                <a href="#kontakt" class="text-slate-600 transition duration-300 hover:text-red-600">Kontakt</a>
+                <a href="firmy.html" class="text-slate-600 transition duration-300 hover:text-red-600">Firmy partnerskie</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-btn" type="button" class="z-50 block text-slate-800 transition hover:text-red-600 focus:outline-none">
+                    <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white/95 backdrop-blur-lg md:hidden">
+            <a href="index.html#manifest" class="block px-6 py-3 text-sm text-slate-700 transition duration-300 hover:bg-red-50 hover:text-red-600">O ruchu</a>
+            <a href="#korzysci" class="block px-6 py-3 text-sm text-slate-700 transition duration-300 hover:bg-red-50 hover:text-red-600">Korzyści</a>
+            <a href="#obszary" class="block px-6 py-3 text-sm text-slate-700 transition duration-300 hover:bg-red-50 hover:text-red-600">Obszary współpracy</a>
+            <a href="#proces" class="block px-6 py-3 text-sm text-slate-700 transition duration-300 hover:bg-red-50 hover:text-red-600">Jak współpracujemy</a>
+            <a href="#kontakt" class="block px-6 py-3 text-sm text-slate-700 transition duration-300 hover:bg-red-50 hover:text-red-600">Kontakt</a>
+            <a href="firmy.html" class="block px-6 py-3 text-sm text-slate-700 transition duration-300 hover:bg-red-50 hover:text-red-600">Firmy partnerskie</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-gradient-to-b from-slate-100 via-white to-white py-16 sm:py-20 lg:py-24">
+            <div class="container mx-auto grid gap-8 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-[0.3em] text-red-600">Partnerstwo dla polskiej gospodarki</span>
+                    <h1 class="mt-4 text-3xl font-bold text-slate-900 md:text-5xl md:leading-tight">Wspólnie budujmy ekosystem wspierający polskie firmy</h1>
+                    <p class="mt-4 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
+                        Patriotyzm Gospodarczy to ogólnopolski ruch, który łączy przedsiębiorców, samorządy, media i społeczności lokalne. Tworzymy przestrzeń do współpracy w zakresie edukacji konsumenckiej, promocji polskich marek oraz rozwoju odpowiedzialnego biznesu.
+                    </p>
+                    <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+                        <a href="#kontakt" class="inline-flex w-full items-center justify-center rounded-full bg-red-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-red-700 hover:shadow-xl sm:w-auto sm:px-8">Umów konsultację</a>
+                        <a href="firmy.html" class="inline-flex w-full items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-center text-base font-semibold text-slate-800 transition duration-300 hover:-translate-y-1 hover:border-red-200 hover:text-red-600 sm:w-auto sm:px-8">Poznaj partnerów</a>
+                    </div>
+                </div>
+                <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-lg sm:p-8">
+                    <h2 class="text-xl font-semibold text-slate-900">Ramy współpracy</h2>
+                    <ul class="mt-4 space-y-3 text-sm text-slate-600 sm:text-base">
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 inline-flex size-6 items-center justify-center rounded-full bg-red-100 text-sm font-semibold text-red-600">1</span>
+                            Strategic partnerstwa, patronaty i kampanie wizerunkowe „Wybieram polskie”.
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 inline-flex size-6 items-center justify-center rounded-full bg-red-100 text-sm font-semibold text-red-600">2</span>
+                            Programy benefitów dla pracowników, akcje samplingowe i wydarzenia specjalne.
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 inline-flex size-6 items-center justify-center rounded-full bg-red-100 text-sm font-semibold text-red-600">3</span>
+                            Wspólne projekty CSR, badania rynkowe i raporty eksperckie promujące polski kapitał.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="korzysci" class="bg-white py-16 sm:py-20 lg:py-24">
+            <div class="container mx-auto px-6">
+                <div class="mx-auto max-w-2xl text-center">
+                    <h2 class="text-3xl font-bold text-slate-900 md:text-4xl">Dlaczego warto do nas dołączyć?</h2>
+                    <p class="mt-4 text-sm text-slate-600 sm:text-base">Budujemy partnerskie relacje oparte na wspólnych wartościach i konkretnych rezultatach biznesowych.</p>
+                </div>
+                <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-slate-900">Wiarygodność marki</h3>
+                        <p class="mt-3 text-sm leading-relaxed text-slate-600">Logotyp Patriotyzmu Gospodarczego podkreśla polską tożsamość i odpowiedzialne podejście do biznesu.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-slate-900">Dotarcie do społeczności</h3>
+                        <p class="mt-3 text-sm leading-relaxed text-slate-600">Docierasz do zaangażowanej społeczności konsumentów, samorządów i mediów wspierających lokalne produkty.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-slate-900">Wspólna promocja</h3>
+                        <p class="mt-3 text-sm leading-relaxed text-slate-600">Tworzymy materiały, kampanie i wydarzenia, które opowiadają o polskich sukcesach na krajowych i zagranicznych rynkach.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="obszary" class="bg-slate-100 py-16 sm:py-20 lg:py-24">
+            <div class="container mx-auto px-6">
+                <div class="mx-auto max-w-2xl text-center">
+                    <h2 class="text-3xl font-bold text-slate-900 md:text-4xl">Obszary współpracy</h2>
+                    <p class="mt-4 text-sm text-slate-600 sm:text-base">Dopasowujemy działania do celów partnerów i charakteru prowadzonej działalności.</p>
+                </div>
+                <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
+                    <article class="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                        <div>
+                            <h3 class="text-lg font-semibold text-slate-900">Partner strategiczny</h3>
+                            <p class="mt-3 text-sm leading-relaxed text-slate-600">Pozycjonowanie marki jako ambasadora patriotyzmu gospodarczego, udział w debatach i raportach branżowych.</p>
+                        </div>
+                        <ul class="mt-4 space-y-1 text-sm text-slate-500">
+                            <li>• Patronaty honorowe</li>
+                            <li>• Działania edukacyjne</li>
+                            <li>• Wspólne kampanie medialne</li>
+                        </ul>
+                    </article>
+                    <article class="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                        <div>
+                            <h3 class="text-lg font-semibold text-slate-900">Partner programowy</h3>
+                            <p class="mt-3 text-sm leading-relaxed text-slate-600">Wsparcie naszych inicjatyw w konkretnych obszarach: handel, logistyka, usługi dla firm, technologia.</p>
+                        </div>
+                        <ul class="mt-4 space-y-1 text-sm text-slate-500">
+                            <li>• Benchmarki i case studies</li>
+                            <li>• Webinary i szkolenia</li>
+                            <li>• Programy lojalnościowe</li>
+                        </ul>
+                    </article>
+                    <article class="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                        <div>
+                            <h3 class="text-lg font-semibold text-slate-900">Partner lokalny</h3>
+                            <p class="mt-3 text-sm leading-relaxed text-slate-600">Inicjatywy z samorządami, izbami gospodarczymi i przedsiębiorcami działającymi w regionach.</p>
+                        </div>
+                        <ul class="mt-4 space-y-1 text-sm text-slate-500">
+                            <li>• Festiwale i targi</li>
+                            <li>• Programy edukacyjne</li>
+                            <li>• Wyróżnienia dla firm</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="proces" class="bg-white py-16 sm:py-20 lg:py-24">
+            <div class="container mx-auto px-6">
+                <div class="mx-auto max-w-2xl text-center">
+                    <h2 class="text-3xl font-bold text-slate-900 md:text-4xl">Jak wygląda współpraca?</h2>
+                    <p class="mt-4 text-sm text-slate-600 sm:text-base">Transparentnie określamy cele, zakres działań i mierniki sukcesu każdego partnerstwa.</p>
+                </div>
+                <div class="mt-10 grid gap-6 lg:grid-cols-3">
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                        <div class="inline-flex size-10 items-center justify-center rounded-full bg-red-100 text-base font-semibold text-red-600">1</div>
+                        <h3 class="mt-4 text-lg font-semibold text-slate-900">Diagnoza potrzeb</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-slate-600">Rozmowa strategiczna, analiza celów biznesowych i określenie potencjalnych synergii.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                        <div class="inline-flex size-10 items-center justify-center rounded-full bg-red-100 text-base font-semibold text-red-600">2</div>
+                        <h3 class="mt-4 text-lg font-semibold text-slate-900">Projekt partnerski</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-slate-600">Ustalamy działania, harmonogram i odpowiedzialności. Dbamy o spójność z identyfikacją partnera.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                        <div class="inline-flex size-10 items-center justify-center rounded-full bg-red-100 text-base font-semibold text-red-600">3</div>
+                        <h3 class="mt-4 text-lg font-semibold text-slate-900">Realizacja i raportowanie</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-slate-600">Regularne podsumowania, mierzenie efektów i rekomendacje dalszych aktywności.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontakt" class="bg-slate-100 py-16 sm:py-20 lg:py-24">
+            <div class="container mx-auto px-6">
+                <div class="mx-auto max-w-3xl rounded-3xl border border-slate-200 bg-white p-6 shadow-xl sm:p-10">
+                    <div class="text-center">
+                        <h2 class="text-3xl font-bold text-slate-900 md:text-4xl">Porozmawiajmy o partnerstwie</h2>
+                        <p class="mt-4 text-sm text-slate-600 sm:text-base">Zostaw nam wiadomość. Odezwiemy się z propozycją współpracy dopasowaną do potrzeb Twojej firmy.</p>
+                    </div>
+                    <form id="partnership-form" class="mt-8 space-y-6">
+                        <div class="grid gap-5 md:grid-cols-2">
+                            <div>
+                                <label for="company_name" class="mb-2 block text-sm font-semibold text-slate-700">Nazwa firmy</label>
+                                <input type="text" id="company_name" name="company_name" class="w-full rounded-md border border-slate-300 px-4 py-2 text-sm text-slate-700 shadow-sm transition focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 sm:text-base" required>
+                            </div>
+                            <div>
+                                <label for="contact_person" class="mb-2 block text-sm font-semibold text-slate-700">Osoba kontaktowa</label>
+                                <input type="text" id="contact_person" name="contact_person" class="w-full rounded-md border border-slate-300 px-4 py-2 text-sm text-slate-700 shadow-sm transition focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 sm:text-base" required>
+                            </div>
+                        </div>
+                        <div class="grid gap-5 md:grid-cols-2">
+                            <div>
+                                <label for="email" class="mb-2 block text-sm font-semibold text-slate-700">Adres e-mail</label>
+                                <input type="email" id="email" name="email" class="w-full rounded-md border border-slate-300 px-4 py-2 text-sm text-slate-700 shadow-sm transition focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 sm:text-base" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="mb-2 block text-sm font-semibold text-slate-700">Telefon (opcjonalnie)</label>
+                                <input type="tel" id="phone" name="phone" class="w-full rounded-md border border-slate-300 px-4 py-2 text-sm text-slate-700 shadow-sm transition focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 sm:text-base">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="cooperation_scope" class="mb-2 block text-sm font-semibold text-slate-700">Jaki obszar współpracy Cię interesuje?</label>
+                            <select id="cooperation_scope" name="cooperation_scope" class="w-full rounded-md border border-slate-300 px-4 py-2 text-sm text-slate-700 shadow-sm transition focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 sm:text-base" required>
+                                <option value="">Wybierz opcję</option>
+                                <option>Partner strategiczny</option>
+                                <option>Partner programowy</option>
+                                <option>Partner lokalny / samorząd</option>
+                                <option>Inne - napisz w wiadomości</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="mb-2 block text-sm font-semibold text-slate-700">Czym chcesz się pochwalić? Co planujesz?</label>
+                            <textarea id="message" name="message" rows="5" class="w-full rounded-md border border-slate-300 px-4 py-2 text-sm text-slate-700 shadow-sm transition placeholder:text-slate-400 focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 sm:text-base" placeholder="Opisz w skrócie projekt, potrzeby lub oczekiwane wsparcie"></textarea>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" id="consent" name="consent" class="mt-1 rounded border-slate-300 text-red-600 focus:ring-red-500" required>
+                            <label for="consent" class="text-xs text-slate-500 sm:text-sm">Wyrażam zgodę na kontakt w sprawie propozycji współpracy i przetwarzanie danych zgodnie z polityką prywatności.</label>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="inline-flex items-center justify-center rounded-full bg-red-600 px-10 py-3 text-sm font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-0.5 hover:bg-red-700 sm:text-base">Wyślij zgłoszenie</button>
+                        </div>
+                    </form>
+                    <div id="partnership-msg" class="mt-6 hidden rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-sm font-medium text-green-700">Dziękujemy! Skontaktujemy się w ciągu dwóch dni roboczych.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 py-10 text-white">
+        <div class="container mx-auto px-6 text-center text-slate-400">
+            <p>&copy; 2024 Patriotyzm Gospodarczy. Wszelkie prawa zastrzeżone.</p>
+            <p class="mt-2 text-sm">Współpraca z biznesem, by wspólnie wspierać polską gospodarkę.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+        }
+
+        const partnershipForm = document.getElementById('partnership-form');
+        const partnershipMsg = document.getElementById('partnership-msg');
+        if (partnershipForm && partnershipMsg) {
+            partnershipForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+                partnershipForm.classList.add('hidden');
+                partnershipMsg.classList.remove('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

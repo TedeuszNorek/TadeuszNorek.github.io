@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firmy współpracujące | Patriotyzm Gospodarczy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Merriweather', serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-lg shadow-sm">
+        <div class="container mx-auto flex items-center justify-between gap-4 px-6 py-2.5 sm:py-3.5">
+            <a href="index.html" class="flex min-w-0 items-center space-x-3">
+                <img src="./assets/logo2.png" class="h-9 w-auto sm:h-10" alt="Logo Patriotyzmu Gospodarczego">
+                <span class="truncate text-lg font-bold tracking-tight text-slate-900 sm:text-xl">Patriotyzm Gospodarczy</span>
+            </a>
+            <nav class="hidden items-center space-x-8 text-sm font-medium md:flex">
+                <a href="index.html#manifest" class="text-slate-600 transition duration-300 hover:text-red-600">O ruchu</a>
+                <a href="partnerzy.html" class="text-slate-600 transition duration-300 hover:text-red-600">Współpraca dla firm</a>
+                <a href="#lista" class="text-slate-600 transition duration-300 hover:text-red-600">Lista firm</a>
+                <a href="#kategorie" class="text-slate-600 transition duration-300 hover:text-red-600">Kategorie</a>
+                <a href="#faq" class="text-slate-600 transition duration-300 hover:text-red-600">FAQ</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-btn" type="button" class="z-50 block text-slate-800 transition hover:text-red-600 focus:outline-none">
+                    <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white/95 backdrop-blur-lg md:hidden">
+            <a href="index.html#manifest" class="block px-6 py-3 text-sm text-slate-700 transition duration-300 hover:bg-red-50 hover:text-red-600">O ruchu</a>
+            <a href="partnerzy.html" class="block px-6 py-3 text-sm text-slate-700 transition duration-300 hover:bg-red-50 hover:text-red-600">Współpraca dla firm</a>
+            <a href="#lista" class="block px-6 py-3 text-sm text-slate-700 transition duration-300 hover:bg-red-50 hover:text-red-600">Lista firm</a>
+            <a href="#kategorie" class="block px-6 py-3 text-sm text-slate-700 transition duration-300 hover:bg-red-50 hover:text-red-600">Kategorie</a>
+            <a href="#faq" class="block px-6 py-3 text-sm text-slate-700 transition duration-300 hover:bg-red-50 hover:text-red-600">FAQ</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-gradient-to-b from-slate-100 via-white to-white py-16 sm:py-20 lg:py-24">
+            <div class="container mx-auto grid gap-10 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-[0.3em] text-red-600">Katalog partnerów</span>
+                    <h1 class="mt-4 text-3xl font-bold text-slate-900 md:text-5xl md:leading-tight">Firmy, które aktywnie wspierają Patriotyzm Gospodarczy</h1>
+                    <p class="mt-4 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
+                        Prezentujemy przedsiębiorstwa, które współtworzą ruch poprzez działania prospołeczne, inwestycje w polskie łańcuchy dostaw i wspólne programy rozwojowe. Skorzystaj z filtrów, aby znaleźć partnerów z konkretnych branż.
+                    </p>
+                    <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+                        <a href="partnerzy.html" class="inline-flex w-full items-center justify-center rounded-full bg-red-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-red-700 hover:shadow-xl sm:w-auto sm:px-8">Dołącz jako partner</a>
+                        <a href="#lista" class="inline-flex w-full items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-center text-base font-semibold text-slate-800 transition duration-300 hover:-translate-y-1 hover:border-red-200 hover:text-red-600 sm:w-auto sm:px-8">Przeglądaj bazę</a>
+                    </div>
+                </div>
+                <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-lg sm:p-8">
+                    <h2 class="text-xl font-semibold text-slate-900">Szybkie filtrowanie</h2>
+                    <p class="mt-2 text-sm text-slate-600">Wybierz kategorię lub wyszukaj firmę po nazwie i regionie.</p>
+                    <div class="mt-4 space-y-3">
+                        <div>
+                            <label for="search-input" class="mb-2 block text-sm font-semibold text-slate-700">Wyszukaj firmę</label>
+                            <input id="search-input" type="search" placeholder="np. żywność, fintech, mazowieckie" class="w-full rounded-md border border-slate-300 px-4 py-2 text-sm text-slate-700 shadow-sm transition focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 sm:text-base">
+                        </div>
+                        <div id="filter-pills" class="flex flex-wrap gap-2"></div>
+                        <p class="text-xs text-slate-500">Dostępne kategorie: Spożywcza, Technologiczna, Usługowa, Finansowa, Logistyka, Edukacja.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="lista" class="bg-white py-16 sm:py-20 lg:py-24">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+                    <div>
+                        <h2 class="text-3xl font-bold text-slate-900 md:text-4xl">Lista firm</h2>
+                        <p class="mt-2 text-sm text-slate-600 sm:text-base">Dane aktualizujemy kwartalnie. Każda współpraca poprzedzona jest audytem i podpisaniem kodeksu etycznego.</p>
+                    </div>
+                    <div class="text-sm text-slate-500">Wyświetlono: <span id="results-count" class="font-semibold text-slate-800"></span></div>
+                </div>
+                <div id="companies-grid" class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3"></div>
+            </div>
+        </section>
+
+        <section id="kategorie" class="bg-slate-100 py-16 sm:py-20 lg:py-24">
+            <div class="container mx-auto px-6">
+                <div class="mx-auto max-w-2xl text-center">
+                    <h2 class="text-3xl font-bold text-slate-900 md:text-4xl">Kategorie działalności</h2>
+                    <p class="mt-4 text-sm text-slate-600 sm:text-base">Nasza baza obejmuje firmy produkcyjne, usługowe, technologiczne oraz organizacje wspierające edukację ekonomiczną.</p>
+                </div>
+                <dl class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                        <dt class="text-lg font-semibold text-slate-900">Spożywcza i FMCG</dt>
+                        <dd class="mt-3 text-sm text-slate-600">Producenci żywności, napojów i kosmetyków korzystający z polskich surowców.</dd>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                        <dt class="text-lg font-semibold text-slate-900">Technologia i innowacje</dt>
+                        <dd class="mt-3 text-sm text-slate-600">Software house’y, firmy hardware oraz startupy rozwijające polską myśl technologiczną.</dd>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                        <dt class="text-lg font-semibold text-slate-900">Usługi i infrastruktura</dt>
+                        <dd class="mt-3 text-sm text-slate-600">Finanse, logistyka, edukacja, doradztwo i inne usługi wspierające rozwój gospodarki.</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <section id="faq" class="bg-white py-16 sm:py-20 lg:py-24">
+            <div class="container mx-auto px-6">
+                <div class="mx-auto max-w-3xl">
+                    <h2 class="text-3xl font-bold text-slate-900 md:text-4xl">Najczęściej zadawane pytania</h2>
+                    <div class="mt-8 space-y-4">
+                        <details class="rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-sm">
+                            <summary class="cursor-pointer text-lg font-semibold text-slate-900">Jak firmy trafiają na listę partnerów?</summary>
+                            <p class="mt-3 text-sm text-slate-600">Przeprowadzamy audyt zgodności z wartościami Patriotyzmu Gospodarczego. Wymagamy min. 70% polskiego kapitału i aktywnych działań społecznych lub rozwojowych.</p>
+                        </details>
+                        <details class="rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-sm">
+                            <summary class="cursor-pointer text-lg font-semibold text-slate-900">Czy można dodać firmę z polecenia?</summary>
+                            <p class="mt-3 text-sm text-slate-600">Tak. Prześlij zgłoszenie przez formularz na stronie głównej lub napisz na partnerzy@patriotyzm.pl. Weryfikację prowadzimy w ciągu 14 dni.</p>
+                        </details>
+                        <details class="rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-sm">
+                            <summary class="cursor-pointer text-lg font-semibold text-slate-900">Jakie są koszty udziału w programie partnerskim?</summary>
+                            <p class="mt-3 text-sm text-slate-600">Model współpracy ustalamy indywidualnie: od patronatów medialnych po programy rozwojowe. Opłaty wiążą się z zakresem działań i promocji.</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 py-10 text-white">
+        <div class="container mx-auto px-6 text-center text-slate-400">
+            <p>&copy; 2024 Patriotyzm Gospodarczy. Wszelkie prawa zastrzeżone.</p>
+            <p class="mt-2 text-sm">Dowiedz się więcej o naszych partnerach biznesowych i dołącz do ruchu.</p>
+        </div>
+    </footer>
+
+    <div id="company-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/70 px-6">
+        <div class="w-full max-w-xl rounded-3xl bg-white p-6 shadow-2xl sm:p-8">
+            <button id="modal-close" class="ml-auto flex size-10 items-center justify-center rounded-full border border-slate-200 text-slate-500 transition hover:border-red-200 hover:text-red-600" aria-label="Zamknij okno">
+                <span class="text-xl">&times;</span>
+            </button>
+            <div id="modal-content" class="mt-4 space-y-4 text-slate-700"></div>
+        </div>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+        }
+
+        const categories = ['Wszystkie', 'Spożywcza', 'Technologiczna', 'Usługowa', 'Finansowa', 'Logistyka', 'Edukacja'];
+        const filterPills = document.getElementById('filter-pills');
+        const searchInput = document.getElementById('search-input');
+        const companiesGrid = document.getElementById('companies-grid');
+        const resultsCount = document.getElementById('results-count');
+
+        const companies = [
+            {
+                name: 'Polska Smaki Sp. z o.o.',
+                category: 'Spożywcza',
+                region: 'Mazowieckie',
+                description: 'Producent tradycyjnych przetworów i zdrowej żywności z polskich upraw.',
+                details: 'Rozbudowana sieć lokalnych dostawców, program edukacyjny dla szkół „Jedz lokalnie”.',
+                link: 'https://example.com',
+            },
+            {
+                name: 'Vistula Software',
+                category: 'Technologiczna',
+                region: 'Małopolskie',
+                description: 'Software house wspierający cyfryzację polskich firm i administracji.',
+                details: 'Specjalizacja w systemach ERP, partner programu GovTech, 200+ specjalistów IT.',
+                link: 'https://example.com',
+            },
+            {
+                name: 'Solid Logistics Polska',
+                category: 'Logistyka',
+                region: 'Pomorskie',
+                description: 'Operator logistyczny z własnymi magazynami i flotą zeroemisyjną.',
+                details: 'Korytarz Bałtyk-Adriatyk, inwestycje w zieloną logistykę, kursy dla kierowców.',
+                link: 'https://example.com',
+            },
+            {
+                name: 'Fundacja Edukacja Pro',
+                category: 'Edukacja',
+                region: 'Wielkopolskie',
+                description: 'Organizacja organizująca warsztaty z przedsiębiorczości dla młodzieży.',
+                details: 'Programy mentoringowe, sieć wolontariuszy biznesowych, granty dla szkół.',
+                link: 'https://example.com',
+            },
+            {
+                name: 'Baltic Finance',
+                category: 'Finansowa',
+                region: 'Pomorskie',
+                description: 'Polski fintech oferujący płatności subskrypcyjne i finansowanie dla MŚP.',
+                details: 'Wspiera firmy rodzinne, certyfikat bezpieczeństwa KNF, doradztwo eksportowe.',
+                link: 'https://example.com',
+            },
+            {
+                name: 'Nowe Horyzonty Usług',
+                category: 'Usługowa',
+                region: 'Dolnośląskie',
+                description: 'Spółka doradcza wdrażająca ESG i automatyzację procesów w przedsiębiorstwach.',
+                details: 'Sieć 18 konsultantów, partnerstwo z ARP, szkolenia dla działów HR i zakupów.',
+                link: 'https://example.com',
+            },
+            {
+                name: 'Polskie Źródła Energii',
+                category: 'Technologiczna',
+                region: 'Śląskie',
+                description: 'Producent komponentów do magazynowania energii i instalacji fotowoltaicznych.',
+                details: 'Linia produkcyjna w Katowicach, R&D we współpracy z politechnikami, 75% eksport.',
+                link: 'https://example.com',
+            },
+            {
+                name: 'Rodzinne Piekarnie Kłos',
+                category: 'Spożywcza',
+                region: 'Małopolskie',
+                description: 'Rodzinna sieć piekarni z tradycyjnymi recepturami i lokalnymi składnikami.',
+                details: 'Program dbałości o lokalnych rolników, warsztaty kulinarne dla seniorów.',
+                link: 'https://example.com',
+            },
+            {
+                name: 'Akademia Kompetencji 4.0',
+                category: 'Edukacja',
+                region: 'Łódzkie',
+                description: 'Centrum szkoleniowe kształcące operatorów i inżynierów przemysłu 4.0.',
+                details: 'Laboratoria VR, współpraca z fabrykami automotive, certyfikaty ISO kompetencji.',
+                link: 'https://example.com',
+            }
+        ];
+
+        const renderFilterButtons = () => {
+            categories.forEach((category, index) => {
+                const button = document.createElement('button');
+                button.type = 'button';
+                button.textContent = category;
+                button.className = 'filter-pill rounded-full border border-slate-300 px-3 py-1.5 text-sm font-medium text-slate-600 transition hover:border-red-200 hover:text-red-600';
+                button.dataset.category = category;
+                if (index === 0) {
+                    button.classList.add('bg-red-600', 'text-white', 'border-red-600');
+                }
+                filterPills.appendChild(button);
+            });
+        };
+
+        const renderCompanies = (items) => {
+            companiesGrid.innerHTML = '';
+            items.forEach((company) => {
+                const card = document.createElement('article');
+                card.className = 'company-card flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg';
+                card.dataset.category = company.category;
+                card.dataset.name = company.name.toLowerCase();
+                card.dataset.region = company.region.toLowerCase();
+                card.dataset.details = company.details;
+                card.innerHTML = `
+                    <div>
+                        <span class="inline-flex items-center rounded-full bg-red-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-red-600">${company.category}</span>
+                        <h3 class="mt-3 text-xl font-semibold text-slate-900">${company.name}</h3>
+                        <p class="mt-1 text-sm text-slate-500">${company.region}</p>
+                        <p class="mt-4 text-sm leading-relaxed text-slate-600">${company.description}</p>
+                    </div>
+                    <div class="mt-6 flex items-center justify-between gap-3">
+                        <button class="details-btn rounded-full border border-slate-300 px-5 py-2 text-sm font-semibold text-slate-700 transition hover:border-red-200 hover:text-red-600" type="button">Szczegóły</button>
+                        <a href="${company.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-semibold text-red-600 transition hover:text-red-700">Strona www<span class="ml-2 text-lg" aria-hidden="true">→</span></a>
+                    </div>
+                `;
+                companiesGrid.appendChild(card);
+            });
+            resultsCount.textContent = `${items.length} firm`;
+        };
+
+        renderFilterButtons();
+        renderCompanies(companies);
+
+        let activeCategory = 'Wszystkie';
+
+        const applyFilters = () => {
+            const query = searchInput.value.trim().toLowerCase();
+            const filtered = companies.filter((company) => {
+                const matchCategory = activeCategory === 'Wszystkie' || company.category === activeCategory;
+                const matchQuery = !query || company.name.toLowerCase().includes(query) || company.region.toLowerCase().includes(query) || company.description.toLowerCase().includes(query);
+                return matchCategory && matchQuery;
+            });
+            renderCompanies(filtered);
+        };
+
+        filterPills.addEventListener('click', (event) => {
+            const button = event.target.closest('.filter-pill');
+            if (!button) return;
+            activeCategory = button.dataset.category;
+            filterPills.querySelectorAll('.filter-pill').forEach(pill => pill.className = 'filter-pill rounded-full border border-slate-300 px-3 py-1.5 text-sm font-medium text-slate-600 transition hover:border-red-200 hover:text-red-600');
+            button.className = 'filter-pill rounded-full border border-red-600 bg-red-600 px-3 py-1.5 text-sm font-medium text-white transition hover:border-red-600 hover:bg-red-600';
+            applyFilters();
+        });
+
+        searchInput.addEventListener('input', () => {
+            applyFilters();
+        });
+
+        const modal = document.getElementById('company-modal');
+        const modalContent = document.getElementById('modal-content');
+        const modalClose = document.getElementById('modal-close');
+
+        const openModal = (company) => {
+            modalContent.innerHTML = `
+                <div class="flex flex-col gap-3">
+                    <span class="inline-flex items-center rounded-full bg-red-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-red-600">${company.category}</span>
+                    <h3 class="text-2xl font-semibold text-slate-900">${company.name}</h3>
+                    <p class="text-sm text-slate-500">${company.region}</p>
+                    <p class="text-sm leading-relaxed text-slate-600">${company.description}</p>
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-700">
+                        <h4 class="text-base font-semibold text-slate-900">Co robią w ramach partnerstwa?</h4>
+                        <p class="mt-2">${company.details}</p>
+                    </div>
+                    <a href="${company.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center self-start rounded-full border border-red-600 px-5 py-2 text-sm font-semibold text-red-600 transition hover:bg-red-50">Przejdź na stronę firmy<span class="ml-2 text-lg" aria-hidden="true">→</span></a>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        };
+
+        const closeModal = () => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        };
+
+        modalClose.addEventListener('click', closeModal);
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        companiesGrid.addEventListener('click', (event) => {
+            const button = event.target.closest('.details-btn');
+            if (!button) return;
+            const card = button.closest('.company-card');
+            const companyName = card.querySelector('h3').textContent;
+            const company = companies.find((item) => item.name === companyName);
+            if (company) {
+                openModal(company);
+            }
+        });
+    </script>
+</body>
+</html>
