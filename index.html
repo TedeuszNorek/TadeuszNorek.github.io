@@ -1,355 +1,329 @@
 <!DOCTYPE html>
-<html lang="pl" class="scroll-smooth">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patriotyzm Gospodarczy | Prawo i Przedsiębiorczość</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tadeusz Norek | Private Chef Portfolio</title>
+    <meta name="description" content="Portfolio kulinarne prywatnego szefa kuchni. Nowoczesna galeria dań w estetyce fusion z naciskiem na zdjęcia, detal i atmosferę prywatnego dining experience.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-    <style>
-        /* Dodatkowe style dla niestandardowych elementów */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        h1, h2, h3 {
-            font-family: 'Merriweather', serif;
-        }
-        .hero-pattern {
-            background-color: #f8fafc;
-            /* Subtelny wzór w tle dla sekcji hero */
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e2e8f0' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/site.js" defer></script>
 </head>
-<body class="bg-slate-50 text-slate-800">
-
-    <!-- Nagłówek i Nawigacja -->
-    <header class="bg-white/85 backdrop-blur-lg sticky top-0 z-50 shadow-sm border-b border-slate-200">
-        <div class="container mx-auto flex items-center justify-between gap-4 px-6 py-2.5 sm:py-3.5">
-            <!-- Logo -->
-            <a href="index.html" class="z-50 flex min-w-0 items-center space-x-3">
-                <!-- Zmieniono ścieżkę na lokalny plik z logo -->
-                <img src="./assets/logo2-removebg-preview.png" class="h-9 w-auto sm:h-10" alt="Logo Patriotyzmu Gospodarczego">
-                <span class="truncate text-lg font-bold tracking-tight text-slate-900 sm:text-xl">Patriotyzm Gospodarczy</span>
+<body>
+    <div class="page-shell">
+        <header class="site-header">
+            <a href="#top" class="brand" aria-label="Powrót na górę strony">
+                <span class="brand__mark">TN</span>
+                <span class="brand__copy">
+                    <strong>Tadeusz Norek</strong>
+                    <small>Private Chef Portfolio</small>
+                </span>
             </a>
-            
-            <!-- Menu nawigacyjne (Desktop) -->
-            <nav class="hidden items-center space-x-8 text-sm font-medium md:flex">
-                <a href="#manifest" class="text-slate-600 hover:text-red-600 transition duration-300 font-medium">Misja</a>
-                <a href="#znak-jakosci" class="text-slate-600 hover:text-red-600 transition duration-300 font-medium">Nasz Znak</a>
-                <a href="#aktualnosci" class="text-slate-600 hover:text-red-600 transition duration-300 font-medium">Aktualności</a>
-                <a href="#spolecznosc" class="text-slate-600 hover:text-red-600 transition duration-300 font-medium">Społeczność</a>
-                <a href="#dolacz" class="text-slate-600 hover:text-red-600 transition duration-300 font-medium">Dołącz do nas</a>
-                <a href="#zglos" class="text-slate-600 hover:text-red-600 transition duration-300 font-medium">Zgłoś inicjatywę</a>
-                <a href="partnerzy.html" class="text-slate-600 hover:text-red-600 transition duration-300 font-medium">Partnerzy biznesowi</a>
-                <a href="firmy.html" class="text-slate-600 hover:text-red-600 transition duration-300 font-medium">Firmy współpracujące</a>
+
+            <nav class="site-nav" aria-label="Główna nawigacja">
+                <a href="#approach">Estetyka</a>
+                <a href="#portfolio">Galeria</a>
+                <a href="#formats">Formaty</a>
             </nav>
-            
-            <!-- Przycisk dla mobilnej nawigacji (Hamburger) -->
-            <div class="md:hidden">
-                 <button id="menu-btn" type="button" class="z-50 block text-slate-800 hover:text-red-600 focus:outline-none">
-                    <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
+        </header>
 
-        <!-- Menu mobilne -->
-        <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white/95 backdrop-blur-lg md:hidden">
-            <a href="#manifest" class="block px-6 py-3 text-sm text-slate-700 transition duration-300 hover:bg-red-50 hover:text-red-600">Misja</a>
-            <a href="#znak-jakosci" class="block px-6 py-3 text-sm text-slate-700 transition duration-300 hover:bg-red-50 hover:text-red-600">Nasz Znak</a>
-            <a href="#aktualnosci" class="block px-6 py-3 text-sm text-slate-700 transition duration-300 hover:bg-red-50 hover:text-red-600">Aktualności</a>
-            <a href="#spolecznosc" class="block px-6 py-3 text-sm text-slate-700 transition duration-300 hover:bg-red-50 hover:text-red-600">Społeczność</a>
-            <a href="#dolacz" class="block px-6 py-3 text-sm text-slate-700 transition duration-300 hover:bg-red-50 hover:text-red-600">Dołącz do nas</a>
-            <a href="#zglos" class="block px-6 py-3 text-sm text-slate-700 transition duration-300 hover:bg-red-50 hover:text-red-600">Zgłoś inicjatywę</a>
-            <a href="partnerzy.html" class="block px-6 py-3 text-sm text-slate-700 transition duration-300 hover:bg-red-50 hover:text-red-600">Partnerzy biznesowi</a>
-            <a href="firmy.html" class="block px-6 py-3 text-sm text-slate-700 transition duration-300 hover:bg-red-50 hover:text-red-600">Firmy współpracujące</a>
-        </div>
-    </header>
-
-    <main>
-        <!-- Sekcja Główna - Manifest -->
-        <section id="manifest" class="hero-pattern py-16 sm:py-20 lg:py-28">
-            <div class="container mx-auto px-6">
-                <div class="space-y-10 lg:grid lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16">
-                    <div class="text-center lg:text-left">
-                        <img src="./assets/logo2-removebg-preview.png" class="mx-auto h-20 w-auto sm:h-24 lg:mx-0" alt="Logo Patriotyzmu Gospodarczego">
-                        <h1 class="mt-6 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl md:text-5xl">
-                            <span class="block">Wspierajmy polską gospodarkę.</span>
-                            <span class="block text-red-600">Każdego dnia.</span>
-                        </h1>
-                        <p class="mx-auto mt-4 max-w-3xl text-base text-slate-600 sm:text-lg lg:mx-0 lg:max-w-xl">
-                            Naszą misją jest budowanie świadomości na temat znaczenia patriotyzmu gospodarczego. Wyróżniamy i nagradzamy produkty stworzone w 100% w Polsce, pokazując, że codzienne wybory konsumenckie wspierają rozwój lokalnych przedsiębiorców i stabilność kraju.
+        <main id="top">
+            <section class="hero">
+                <div class="hero__backdrop" aria-hidden="true"></div>
+                <div class="container hero__grid">
+                    <div class="hero__content reveal">
+                        <p class="eyebrow">Private dining • seasonal storytelling • fusion soul</p>
+                        <h1>Private dining.<br>Fusion soul.</h1>
+                        <p class="hero__lead">
+                            Portfolio prywatnego szefa kuchni zbudowane wokół obrazu talerza: ręcznie lepione ravioli, warzywne comfort food,
+                            aksamitne zupy i kompozycje, w których detal ma taką samą wagę jak smak.
                         </p>
-                        <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
-                            <a href="#dolacz" class="inline-flex w-full items-center justify-center rounded-full bg-red-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-red-700 hover:shadow-xl sm:w-auto sm:min-w-[14rem] sm:px-8">
-                                Dowiedz się więcej i dołącz
-                            </a>
-                            <a href="partnerzy.html" class="inline-flex w-full items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-center text-base font-semibold text-slate-800 transition duration-300 hover:-translate-y-1 hover:border-red-200 hover:text-red-600 sm:w-auto sm:min-w-[14rem] sm:px-8">
-                                Współpraca dla firm
-                            </a>
+
+                        <div class="hero__actions">
+                            <a href="#portfolio" class="button button--primary">Zobacz galerię</a>
+                            <a href="#approach" class="button button--ghost">Poznaj estetykę</a>
                         </div>
+
+                        <ul class="hero__meta" aria-label="Specjalizacje">
+                            <li>Private dining</li>
+                            <li>Fusion menus</li>
+                            <li>Editorial plating</li>
+                        </ul>
                     </div>
-                    <div class="grid gap-4 sm:grid-cols-2">
-                        <article class="rounded-2xl border border-slate-200 bg-white/80 p-5 text-left shadow-sm backdrop-blur">
-                            <h3 class="text-lg font-semibold text-slate-900">Świadome wybory</h3>
-                            <p class="mt-2 text-sm text-slate-600">Pokazujemy, jak codzienne decyzje zakupowe wzmacniają polskie firmy i miejsca pracy.</p>
-                        </article>
-                        <article class="rounded-2xl border border-slate-200 bg-white/80 p-5 text-left shadow-sm backdrop-blur">
-                            <h3 class="text-lg font-semibold text-slate-900">Wyróżnienie jakości</h3>
-                            <p class="mt-2 text-sm text-slate-600">Znak Patriotyzmu Gospodarczego otrzymują inicjatywy powstające w 100% w kraju.</p>
-                        </article>
-                        <article class="rounded-2xl border border-slate-200 bg-white/80 p-5 text-left shadow-sm backdrop-blur sm:col-span-2">
-                            <h3 class="text-lg font-semibold text-slate-900">Sieć wsparcia</h3>
-                            <p class="mt-2 text-sm text-slate-600">Łączymy przedsiębiorców, samorządy i społeczności, aby wspólnie promować rodzime marki.</p>
-                        </article>
+
+                    <div class="hero__visual reveal" data-delay="120">
+                        <figure class="hero-card">
+                            <img
+                                src="assets/food/salata-figi-truskawki.jpg"
+                                alt="Sałata z figą, truskawką i pistacją"
+                            >
+                            <figcaption>
+                                <span class="hero-card__label">Signature plate</span>
+                                <h2>Sałata z figą, truskawką i pistacją</h2>
+                                <p>Mediterranean market</p>
+                            </figcaption>
+                        </figure>
                     </div>
                 </div>
-            </div>
-        </section>
-        
-        <!-- Nowa sekcja "Nasz Znak Jakości" -->
-        <section id="znak-jakosci" class="bg-slate-100 py-16 sm:py-20 lg:py-24">
-            <div class="container mx-auto px-6 text-center">
-                <img src="./assets/logo2-removebg-preview.png" class="mx-auto mb-6 h-20 w-auto sm:mb-8 sm:h-24" alt="Znak Towarowy Patriotyzmu Gospodarczego">
-                <h2 class="mb-4 text-3xl font-bold text-red-700 md:mb-6 md:text-4xl">Nasz Znak Jakości</h2>
-                <p class="mx-auto max-w-3xl text-sm text-slate-600 sm:text-base">
-                    Ten znak to więcej niż logo. To zarejestrowany znak towarowy, który będzie przyznawany wyłącznie produktom i usługom w 100% stworzonym w Polsce. Jest on gwarancją polskiego kapitału, polskiej pracy i najwyższej jakości. Szukaj go na produktach i wspieraj świadomie to, co nasze.
-                </p>
-            </div>
-        </section>
 
-        <!-- Sekcja Aktualności -->
-        <section id="aktualnosci" class="bg-white py-16 sm:py-20 lg:py-24">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="mb-4 text-3xl font-bold text-red-700 md:mb-6 md:text-4xl">Aktualności</h2>
-                <p class="mx-auto mb-10 max-w-2xl text-sm text-slate-600 sm:text-base">Najnowsze informacje, analizy i historie sukcesu polskich firm i inicjatyw.</p>
-                
-                <div class="grid grid-cols-1 gap-6 text-left sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    <!-- Przykład 1 -->
-                    <div class="overflow-hidden rounded-xl bg-slate-50 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                        <div class="h-48 w-full bg-gradient-to-r from-slate-900 via-slate-800 to-slate-600">
-                            <img class="h-full w-full object-cover object-center mix-blend-overlay" src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80" alt="Artykuł o finansach">
-                        </div>
-                        <div class="p-6 sm:p-8">
-                            <span class="text-xs font-semibold uppercase tracking-wide text-red-600">Prawo &amp; finanse</span>
-                            <h3 class="mt-3 text-lg font-bold text-slate-900 sm:text-xl">Nowe regulacje wspierające MŚP</h3>
-                            <p class="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">Analizujemy, jak najnowsze zmiany w prawie wpłyną na rozwój lokalnych firm i co oznaczają dla przedsiębiorców.</p>
-                            <a href="#" class="mt-4 inline-flex items-center text-sm font-semibold text-slate-800 transition-colors hover:text-red-600">
-                                Czytaj więcej
-                                <span class="ml-2 text-lg" aria-hidden="true">→</span>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Przykład 2 -->
-                    <div class="overflow-hidden rounded-xl bg-slate-50 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                         <div class="h-48 w-full bg-gradient-to-r from-emerald-600 via-emerald-500 to-emerald-400">
-                            <img class="h-full w-full object-cover object-center mix-blend-overlay" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Artykuł o technologii">
-                        </div>
-                        <div class="p-6 sm:p-8">
-                            <span class="text-xs font-semibold uppercase tracking-wide text-red-600">Innowacje &amp; technologia</span>
-                            <h3 class="mt-3 text-lg font-bold text-slate-900 sm:text-xl">Polski startup na rynkach globalnych</h3>
-                            <p class="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">Historia sukcesu firmy z Gdańska, która pokazuje, że polska myśl technologiczna może konkurować na światowym poziomie.</p>
-                            <a href="#" class="mt-4 inline-flex items-center text-sm font-semibold text-slate-800 transition-colors hover:text-red-600">
-                                Czytaj więcej
-                                <span class="ml-2 text-lg" aria-hidden="true">→</span>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Przykład 3 -->
-                    <div class="overflow-hidden rounded-xl bg-slate-50 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                        <div class="h-48 w-full bg-gradient-to-r from-indigo-700 via-indigo-600 to-blue-500">
-                            <img class="h-full w-full object-cover object-center mix-blend-overlay" src="https://images.unsplash.com/photo-1515165562835-c4c5dae71d9f?auto=format&fit=crop&w=900&q=80" alt="Artykuł o społeczności lokalnej">
-                        </div>
-                        <div class="p-6 sm:p-8">
-                            <span class="text-xs font-semibold uppercase tracking-wide text-red-600">Społeczność lokalna</span>
-                            <h3 class="mt-3 text-lg font-bold text-slate-900 sm:text-xl">Inicjatywa „Kupuj Lokalnie” w Małopolsce</h3>
-                            <p class="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">Sprawdzamy, jak kampania społeczna wpłynęła na wzrost obrotów lokalnych producentów i rzemieślników.</p>
-                            <a href="#" class="mt-4 inline-flex items-center text-sm font-semibold text-slate-800 transition-colors hover:text-red-600">
-                                Czytaj więcej
-                                <span class="ml-2 text-lg" aria-hidden="true">→</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <a href="#portfolio" class="hero__scroll">Scroll to taste</a>
+            </section>
 
-        <!-- Sekcja Społeczność -->
-        <section id="spolecznosc" class="bg-slate-100 py-16 sm:py-20 lg:py-24">
-            <div class="container mx-auto px-6">
-                <div class="grid items-center gap-10 lg:grid-cols-2">
-                    <div>
-                        <span class="text-xs font-semibold uppercase tracking-[0.3em] text-red-600">Razem tworzymy ruch</span>
-                        <h2 class="mt-4 text-3xl font-bold text-red-700 md:text-4xl">Społeczność Patriotyzmu Gospodarczego</h2>
-                        <p class="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
-                            Spotykamy się w realu i online, organizujemy warsztaty, wizyty w zakładach produkcyjnych, kampanie edukacyjne i akcje promujące polskie marki. Poznaj ludzi, którzy budują gospodarczy potencjał Polski i wspierają lokalnych przedsiębiorców.
+            <section id="approach" class="intro section">
+                <div class="container intro__grid">
+                    <div class="section-heading reveal">
+                        <p class="eyebrow">Nowoczesna estetyka fusion</p>
+                        <h2>Kuchnia oparta na kontraście: kremowość, zioła, ogień i cisza wokół talerza.</h2>
+                    </div>
+
+                    <div class="intro__copy reveal" data-delay="100">
+                        <p>
+                            Ta strona działa jak wizualny dziennik dań. Zamiast klasycznej karty menu pokazuje atmosferę prywatnej kolacji:
+                            światło, tekstury, ręczną pracę i sposób podania, w którym jedzenie jest głównym bohaterem.
                         </p>
-                        <div class="mt-6 grid gap-4 sm:grid-cols-2">
-                            <div class="rounded-lg border border-slate-200 bg-white p-4 shadow-sm">
-                                <p class="text-3xl font-bold text-slate-900">12+</p>
-                                <p class="mt-1 text-sm text-slate-600">województw objętych działaniami społeczności</p>
-                            </div>
-                            <div class="rounded-lg border border-slate-200 bg-white p-4 shadow-sm">
-                                <p class="text-3xl font-bold text-slate-900">4 500</p>
-                                <p class="mt-1 text-sm text-slate-600">aktywnych członków i wolontariuszy ruchu</p>
-                            </div>
-                        </div>
-                        <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-                            <a href="#dolacz" class="inline-flex w-full items-center justify-center rounded-full bg-red-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-red-700 hover:shadow-xl sm:w-auto sm:px-8">
-                                Dołącz do społeczności
-                            </a>
-                            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="inline-flex w-full items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-center text-base font-semibold text-slate-800 transition duration-300 hover:-translate-y-1 hover:border-red-200 hover:text-red-600 sm:w-auto sm:px-8">
-                                Zobacz nasze wydarzenia
-                            </a>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:pb-6">
-                            <figure class="relative overflow-hidden rounded-2xl bg-white shadow-lg">
-                                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80" alt="Warsztaty z polskimi przedsiębiorcami" class="h-56 w-full object-cover sm:h-52 lg:h-60">
-                                <figcaption class="p-4 text-sm text-slate-700">Warsztaty prawa gospodarczego dla lokalnych firm z Podlasia.</figcaption>
-                            </figure>
-                            <figure class="relative overflow-hidden rounded-2xl bg-white shadow-lg">
-                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="Wizyta w zakładzie produkcyjnym" class="h-56 w-full object-cover sm:h-52 lg:h-60">
-                                <figcaption class="p-4 text-sm text-slate-700">Wizyty studyjne w zakładach produkcyjnych wyróżnionych znakiem PG.</figcaption>
-                            </figure>
-                            <figure class="relative overflow-hidden rounded-2xl bg-white shadow-lg">
-                                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80" alt="Akcja promocyjna w centrum miasta" class="h-56 w-full object-cover sm:h-52 lg:h-60">
-                                <figcaption class="p-4 text-sm text-slate-700">Akcje promocyjne w miastach – zachęcamy do wyboru polskich produktów.</figcaption>
-                            </figure>
+
+                        <div class="chip-row" aria-label="Styl pracy">
+                            <span>Seasonal produce</span>
+                            <span>Handmade pasta</span>
+                            <span>Vegetable-forward plates</span>
+                            <span>Intimate dinners</span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Sekcja "Dołącz do nas" -->
-        <section id="dolacz" class="bg-slate-100 py-16 sm:py-20 lg:py-24">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="mb-4 text-3xl font-bold text-red-700 md:mb-6 md:text-4xl">Dołącz do Nas</h2>
-                <p class="mx-auto mb-10 max-w-2xl text-sm text-slate-600 sm:text-base">Zapisz się, aby otrzymywać regularne aktualizacje, analizy prawne i informacje o inicjatywach, które możesz wesprzeć.</p>
-                <form id="subscribe-form" class="max-w-lg mx-auto">
-                    <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-                        <input type="email" placeholder="Wpisz swój adres e-mail" class="w-full rounded-md border border-slate-300 px-5 py-3 text-sm text-slate-700 shadow-sm transition duration-300 focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 sm:text-base" required>
-                        <button type="submit" class="w-full rounded-md bg-red-600 px-6 py-3 text-sm font-semibold text-white shadow-md transition duration-300 hover:-translate-y-0.5 hover:bg-red-700 sm:w-auto sm:text-base">Zapisz się</button>
-                    </div>
-                </form>
-                <div id="subscribe-msg" class="mt-4 text-green-600 font-medium hidden">Dziękujemy za subskrypcję!</div>
-            </div>
-        </section>
-
-        <!-- Sekcja "Zgłoś lokalną inicjatywę" -->
-        <section id="zglos" class="bg-white py-16 sm:py-20 lg:py-24">
-            <div class="container mx-auto px-6">
-                <div class="max-w-3xl mx-auto text-center">
-                     <h2 class="mb-4 text-3xl font-bold text-red-700 md:mb-6 md:text-4xl">Zgłoś Lokalną Inicjatywę</h2>
-                     <p class="mb-10 text-sm text-slate-600 sm:text-base">Znasz polską firmę, produkt lub inicjatywę, którą warto promować? Daj nam znać! Wspólnie możemy nagłośnić wartościowe projekty, które budują siłę naszej gospodarki.</p>
-                </div>
-                
-                <form id="report-form" class="max-w-3xl mx-auto rounded-xl bg-slate-50 p-6 shadow-lg sm:p-8">
-                    <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+            <section id="portfolio" class="gallery section">
+                <div class="container">
+                    <div class="section-heading section-heading--split reveal">
                         <div>
-                            <label for="name" class="mb-2 block text-sm font-semibold text-slate-700">Twoje imię i nazwisko</label>
-                            <input type="text" id="name" name="name" class="w-full rounded-md border border-slate-300 px-4 py-2 text-sm text-slate-700 transition focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 sm:text-base" required>
+                            <p class="eyebrow">Selected plates</p>
+                            <h2>Galeria dań</h2>
                         </div>
-                         <div>
-                            <label for="email_zglos" class="mb-2 block text-sm font-semibold text-slate-700">Twój e-mail kontaktowy</label>
-                            <input type="email" id="email_zglos" name="email_zglos" class="w-full rounded-md border border-slate-300 px-4 py-2 text-sm text-slate-700 transition focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 sm:text-base" required>
-                        </div>
+                        <p class="section-note">Najedź lub kliknij zdjęcie, aby wejść bliżej i zobaczyć detal.</p>
                     </div>
-                    <div class="mt-6">
-                        <label for="initiative_name" class="mb-2 block text-sm font-semibold text-slate-700">Nazwa inicjatywy / firmy</label>
-                        <input type="text" id="initiative_name" name="initiative_name" class="w-full rounded-md border border-slate-300 px-4 py-2 text-sm text-slate-700 transition focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 sm:text-base" required>
-                    </div>
-                    <div class="mt-6">
-                        <label for="description" class="mb-2 block text-sm font-semibold text-slate-700">Opisz krótko inicjatywę</label>
-                        <textarea id="description" name="description" rows="5" class="w-full rounded-md border border-slate-300 px-4 py-2 text-sm text-slate-700 transition placeholder:text-slate-400 focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 sm:text-base" placeholder="Czym się zajmują? Dlaczego warto ich wesprzeć?"></textarea>
-                    </div>
-                    <div class="mt-8 text-center">
-                        <button type="submit" class="inline-flex items-center justify-center rounded-full bg-slate-800 px-10 py-3 text-sm font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-0.5 hover:bg-slate-900 sm:text-base">Wyślij zgłoszenie</button>
-                    </div>
-                </form>
-                 <div id="report-msg" class="mt-8 text-center text-green-600 font-medium hidden">Dziękujemy za zgłoszenie inicjatywy!</div>
-            </div>
-        </section>
-    </main>
 
-    <!-- Stopka -->
-    <footer class="bg-slate-900 text-white py-10">
-        <div class="container mx-auto px-6 text-center text-slate-400">
-            <img src="./assets/logo2-removebg-preview.png" class="mx-auto mb-5 h-16 w-auto" alt="Logo Patriotyzmu Gospodarczego">
-            <p>&copy; 2025 Patriotyzm Gospodarczy. Wszelkie prawa zastrzeżone.</p>
-            <p class="text-sm mt-2">Inicjatywa na rzecz wspierania polskiej przedsiębiorczości.</p>
+                    <div class="gallery-grid" data-masonry>
+                        <article class="gallery-card reveal" style="--span: 5; --span-tablet: 3; --ratio: 4 / 5;">
+                            <button
+                                class="gallery-card__button"
+                                type="button"
+                                data-lightbox-trigger
+                                data-image="assets/food/veloute-pora.jpg"
+                                data-title="Velouté z palonego pora"
+                                data-cuisine="French-Polish fusion"
+                                data-description="Aksamitna zupa z pianką, pestkami i zielonym finiszem."
+                            >
+                                <span class="gallery-card__media">
+                                    <img src="assets/food/veloute-pora.jpg" alt="Veloute z palonego pora z pianką i pestkami dyni" loading="lazy">
+                                </span>
+                                <span class="gallery-card__overlay">
+                                    <span class="gallery-card__label">French-Polish fusion</span>
+                                    <strong>Veloute z palonego pora</strong>
+                                    <small>Aksamitna zupa z pianką, pestkami i zielonym finiszem.</small>
+                                </span>
+                            </button>
+                        </article>
+
+                        <article class="gallery-card reveal" data-delay="40" style="--span: 3; --span-tablet: 3; --ratio: 3 / 4;">
+                            <button
+                                class="gallery-card__button"
+                                type="button"
+                                data-lightbox-trigger
+                                data-image="assets/food/ravioli-szparagi.jpg"
+                                data-title="Ravioli ze szparagami, ricottą i miętą"
+                                data-cuisine="Italian garden fusion"
+                                data-description="Ręcznie lepione ravioli z miękką ricottą i ziołowym aromatem."
+                            >
+                                <span class="gallery-card__media">
+                                    <img src="assets/food/ravioli-szparagi.jpg" alt="Ravioli ze szparagami, ricottą i miętą" loading="lazy">
+                                </span>
+                                <span class="gallery-card__overlay">
+                                    <span class="gallery-card__label">Italian garden fusion</span>
+                                    <strong>Ravioli ze szparagami, ricottą i miętą</strong>
+                                    <small>Ręcznie lepione ravioli z miękką ricottą i ziołowym aromatem.</small>
+                                </span>
+                            </button>
+                        </article>
+
+                        <article class="gallery-card reveal" data-delay="80" style="--span: 4; --span-tablet: 6; --ratio: 4 / 3;">
+                            <button
+                                class="gallery-card__button"
+                                type="button"
+                                data-lightbox-trigger
+                                data-image="assets/food/salata-figi-truskawki.jpg"
+                                data-title="Sałata z figą, truskawką i pistacją"
+                                data-cuisine="Mediterranean market"
+                                data-description="Świeża kompozycja liści, sera i owoców z kontrastem kwasu oraz słodyczy."
+                            >
+                                <span class="gallery-card__media">
+                                    <img src="assets/food/salata-figi-truskawki.jpg" alt="Sałata z figą, truskawką i pistacją" loading="lazy">
+                                </span>
+                                <span class="gallery-card__overlay">
+                                    <span class="gallery-card__label">Mediterranean market</span>
+                                    <strong>Sałata z figą, truskawką i pistacją</strong>
+                                    <small>Świeża kompozycja liści, sera i owoców z kontrastem kwasu oraz słodyczy.</small>
+                                </span>
+                            </button>
+                        </article>
+
+                        <article class="gallery-card reveal" data-delay="120" style="--span: 4; --span-tablet: 3; --ratio: 3 / 4;">
+                            <button
+                                class="gallery-card__button"
+                                type="button"
+                                data-lightbox-trigger
+                                data-image="assets/food/tarta-szpinak.jpg"
+                                data-title="Tarta ze szpinakiem i ziołami"
+                                data-cuisine="Bistro comfort"
+                                data-description="Pieczona tarta z zielonym środkiem i delikatnym, domowym charakterem."
+                            >
+                                <span class="gallery-card__media">
+                                    <img src="assets/food/tarta-szpinak.jpg" alt="Tarta ze szpinakiem i ziołami" loading="lazy">
+                                </span>
+                                <span class="gallery-card__overlay">
+                                    <span class="gallery-card__label">Bistro comfort</span>
+                                    <strong>Tarta ze szpinakiem i ziołami</strong>
+                                    <small>Pieczona tarta z zielonym środkiem i delikatnym, domowym charakterem.</small>
+                                </span>
+                            </button>
+                        </article>
+
+                        <article class="gallery-card reveal" data-delay="160" style="--span: 3; --span-tablet: 3; --ratio: 4 / 5;">
+                            <button
+                                class="gallery-card__button"
+                                type="button"
+                                data-lightbox-trigger
+                                data-image="assets/food/frittata-ogrod.jpg"
+                                data-title="Frittata ogrodowa z kozim serem"
+                                data-cuisine="Rustic brunch fusion"
+                                data-description="Warzywna porcja comfort food podana w słonecznym, swobodnym kadrze."
+                            >
+                                <span class="gallery-card__media">
+                                    <img src="assets/food/frittata-ogrod.jpg" alt="Frittata ogrodowa z kozim serem" loading="lazy">
+                                </span>
+                                <span class="gallery-card__overlay">
+                                    <span class="gallery-card__label">Rustic brunch fusion</span>
+                                    <strong>Frittata ogrodowa z kozim serem</strong>
+                                    <small>Warzywna porcja comfort food podana w słonecznym, swobodnym kadrze.</small>
+                                </span>
+                            </button>
+                        </article>
+
+                        <article class="gallery-card reveal" data-delay="200" style="--span: 5; --span-tablet: 6; --ratio: 16 / 11;">
+                            <button
+                                class="gallery-card__button"
+                                type="button"
+                                data-lightbox-trigger
+                                data-image="assets/food/parmigiana-kalafior.jpg"
+                                data-title="Parmigiana z kalafiora"
+                                data-cuisine="Italian comfort reworked"
+                                data-description="Zapieczona warstwa koloru i karmelizacji w bardziej roślinnej odsłonie."
+                            >
+                                <span class="gallery-card__media">
+                                    <img src="assets/food/parmigiana-kalafior.jpg" alt="Parmigiana z kalafiora zapiekana na złoto" loading="lazy">
+                                </span>
+                                <span class="gallery-card__overlay">
+                                    <span class="gallery-card__label">Italian comfort reworked</span>
+                                    <strong>Parmigiana z kalafiora</strong>
+                                    <small>Zapieczona warstwa koloru i karmelizacji w bardziej roślinnej odsłonie.</small>
+                                </span>
+                            </button>
+                        </article>
+
+                        <article class="gallery-card reveal" data-delay="240" style="--span: 3; --span-tablet: 3; --ratio: 4 / 5;">
+                            <button
+                                class="gallery-card__button"
+                                type="button"
+                                data-lightbox-trigger
+                                data-image="assets/food/czarna-soczewica-mango.jpg"
+                                data-title="Midnight dal z mango i miętą"
+                                data-cuisine="Indian-Mediterranean fusion"
+                                data-description="Ciemna, gęsta baza przecięta świeżością mięty i owocu."
+                            >
+                                <span class="gallery-card__media">
+                                    <img src="assets/food/czarna-soczewica-mango.jpg" alt="Ciemne danie z mango i miętą" loading="lazy">
+                                </span>
+                                <span class="gallery-card__overlay">
+                                    <span class="gallery-card__label">Indian-Mediterranean fusion</span>
+                                    <strong>Midnight dal z mango i miętą</strong>
+                                    <small>Ciemna, gęsta baza przecięta świeżością mięty i owocu.</small>
+                                </span>
+                            </button>
+                        </article>
+
+                        <article class="gallery-card reveal" data-delay="280" style="--span: 4; --span-tablet: 6; --ratio: 3 / 4;">
+                            <button
+                                class="gallery-card__button"
+                                type="button"
+                                data-lightbox-trigger
+                                data-image="assets/food/ravioli-szalwia.jpg"
+                                data-title="Ravioli z szałwią, ricottą i leśnym grzybem"
+                                data-cuisine="Handmade pasta study"
+                                data-description="Proces i gotowe danie w jednym kadrze: ciasto, mąka i nadzienie."
+                            >
+                                <span class="gallery-card__media">
+                                    <img src="assets/food/ravioli-szalwia.jpg" alt="Ravioli z szałwią, ricottą i leśnym grzybem" loading="lazy">
+                                </span>
+                                <span class="gallery-card__overlay">
+                                    <span class="gallery-card__label">Handmade pasta study</span>
+                                    <strong>Ravioli z szałwią, ricottą i leśnym grzybem</strong>
+                                    <small>Proces i gotowe danie w jednym kadrze: ciasto, mąka i nadzienie.</small>
+                                </span>
+                            </button>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="formats" class="formats section">
+                <div class="container formats__grid">
+                    <div class="section-heading reveal">
+                        <p class="eyebrow">Dining formats</p>
+                        <h2>Jedzenie jako doświadczenie, nie tylko serwis.</h2>
+                    </div>
+
+                    <div class="formats__cards">
+                        <article class="format-card reveal" data-delay="60">
+                            <span>01</span>
+                            <h3>Prywatne kolacje</h3>
+                            <p>Intymne wieczory z dopracowanym rytmem dań, światła i opowieści wokół stołu.</p>
+                        </article>
+
+                        <article class="format-card reveal" data-delay="120">
+                            <span>02</span>
+                            <h3>Menu sezonowe</h3>
+                            <p>Warzywa, zioła, kremowe tekstury i komfortowe formy przepisane na nowo.</p>
+                        </article>
+
+                        <article class="format-card reveal" data-delay="180">
+                            <span>03</span>
+                            <h3>Kolaboracje kulinarne</h3>
+                            <p>Sesje, pop-upy i projekty, w których smak musi działać tak samo mocno jak obraz.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>Tadeusz Norek • Culinary portfolio built around image, texture and private dining atmosphere.</p>
+        </footer>
+    </div>
+
+    <div class="lightbox" data-lightbox hidden>
+        <div class="lightbox__backdrop" data-lightbox-close></div>
+        <div class="lightbox__dialog" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+            <button class="lightbox__close" type="button" aria-label="Zamknij podgląd" data-lightbox-close>Zamknij</button>
+            <figure class="lightbox__figure">
+                <img class="lightbox__image" src="" alt="">
+                <figcaption class="lightbox__caption">
+                    <span class="lightbox__kicker" id="lightbox-kicker"></span>
+                    <h3 id="lightbox-title"></h3>
+                    <p id="lightbox-description"></p>
+                </figcaption>
+            </figure>
         </div>
-    </footer>
-
-    <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        if (menuBtn && mobileMenu) {
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-        }
-
-        const header = document.querySelector('header');
-        const inPageLinks = document.querySelectorAll('header nav a[href^="#"], #mobile-menu a[href^="#"]');
-
-        const handleInPageNavigation = (event) => {
-            const targetId = event.currentTarget.getAttribute('href');
-            if (!targetId || targetId === '#') return;
-
-            const targetSection = document.querySelector(targetId);
-            if (!targetSection) return;
-
-            event.preventDefault();
-            const offset = (header ? header.offsetHeight : 0) + 16;
-            const topPosition = targetSection.getBoundingClientRect().top + window.scrollY - offset;
-
-            window.scrollTo({
-                top: topPosition < 0 ? 0 : topPosition,
-                behavior: 'smooth',
-            });
-
-            if (mobileMenu) {
-                mobileMenu.classList.add('hidden');
-            }
-        };
-
-        inPageLinks.forEach(link => link.addEventListener('click', handleInPageNavigation));
-
-        // Form submission handlers
-        const subscribeForm = document.getElementById('subscribe-form');
-        const subscribeMsg = document.getElementById('subscribe-msg');
-        if (subscribeForm) {
-            subscribeForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                subscribeForm.classList.add('hidden');
-                if(subscribeMsg) subscribeMsg.classList.remove('hidden');
-            });
-        }
-
-        const reportForm = document.getElementById('report-form');
-        const reportMsg = document.getElementById('report-msg');
-        if (reportForm) {
-            reportForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                reportForm.style.display = 'none';
-                if(reportMsg) reportMsg.classList.remove('hidden');
-            });
-        }
-    </script>
-
+    </div>
 </body>
 </html>
